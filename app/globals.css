@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #020617;
+  --foreground: #f8fafc;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Solana Wallet Adapter UI Tweaks */
+.wallet-adapter-button {
+  background-color: #0891b2 !important; /* Tailwind cyan-600 */
+  font-family: inherit !important;
+  border-radius: 0.5rem !important;
+}
+
+.wallet-adapter-button:hover {
+  background-color: #06b6d4 !important; /* Tailwind cyan-500 */
+}
