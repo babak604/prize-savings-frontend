@@ -1,19 +1,27 @@
+// Node Polyfills for Solana Web3 SDK
+import { Buffer } from 'buffer';
+import process from 'process';
+
+if (typeof window !== 'undefined') {
+  (window as any).Buffer = (window as any).Buffer || Buffer;
+  (window as any).global = (window as any).global || window;
+  (window as any).process = (window as any).process || process;
+}
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Page from '../app/page';
-import '../app/globals.css';
+import { SolanaWalletProvider } from './providers/WalletProvider';
+import './index.css';
 
-// Force global Buffer availability before any Solana SDK loads
-if (typeof window !== 'undefined') {
-  window.Buffer = window.Buffer || Buffer;
-  window.global = window.global || window;
-  window.process = window.process || { env: {} };
+const rootElement = document.getElementById('root');
+
+if (rootElement) {
+  ReactDOM.createRoot(rootElement).render(
+    <React.StrictMode>
+      <SolanaWalletProvider>
+        <Page />
+      </SolanaWalletProvider>
+    </React.StrictMode>
+  );
 }
-
-console.log("🚀 mor.money main.tsx loaded successfully");
-
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <Page />
-  </React.StrictMode>
-);
