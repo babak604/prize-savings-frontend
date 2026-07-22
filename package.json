@@ -1,40 +1,34 @@
 {
-  "name": "prize-savings-frontend",
-  "version": "0.1.0",
+  "name": "mor-money",
   "private": true,
+  "version": "0.1.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@coral-xyz/anchor": "^0.31.0",
-    "@solana/wallet-adapter-base": "^0.9.27",
-    "@solana/wallet-adapter-react": "^0.15.39",
-    "@solana/wallet-adapter-react-ui": "^0.9.39",
-    "@solana/wallet-adapter-wallets": "^0.19.38",
-    "@solana/web3.js": "^1.98.4",
+    "@coral-xyz/anchor": "^0.30.1",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/web3.js": "^1.95.8",
+    "@tailwindcss/vite": "^4.0.0",
     "buffer": "^6.0.3",
-    "lucide-react": "^0.344.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "process": "^0.11.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.3.3",
-    "@types/node": "^20.11.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "@vitejs/plugin-react": "^4.2.1",
-    "autoprefixer": "^10.5.4",
-    "postcss": "^8.5.22",
-    "tailwindcss": "^4.3.3",
-    "typescript": "^5.3.3",
-    "vite": "^5.1.0",
-    "vite-plugin-node-polyfills": "^0.28.0"
-  },
-  "overrides": {
-    "react": "$react",
-    "react-dom": "$react-dom"
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.0",
+    "vite-plugin-node-polyfills": "^0.23.0"
   }
 }
